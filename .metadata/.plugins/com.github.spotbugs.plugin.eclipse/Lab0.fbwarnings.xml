@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.1.2" sequence="1" timestamp="1599426047184" analysisTimestamp="1599426045846" release="">
+  <Project projectName="Lab0">
+    <Jar>/Users/zklimanova/Desktop/ECSE 211/Lab0/bin</Jar>
+    <AuxClasspathEntry>/Users/zklimanova/Desktop/ECSE 211/Lab0/bin</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/rt.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/jre/lib/jce.jar</AuxClasspathEntry>
+    <SrcDir>/Users/zklimanova/Desktop/ECSE 211/Lab0/src</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sun, 6 Sep 2020 17:00:45 -0400" total_classes="0" referenced_classes="0" total_bugs="0" total_size="0" num_packages="0" java_version="1.8.0_221" vm_version="25.221-b11" cpu_seconds="6.66" clock_seconds="1.34" peak_mbytes="441.60" alloc_mbytes="1024.00" gc_seconds="0.10">
+    <FindBugsProfile>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="287" invocations="2" avgMicrosecondsPerInvocation="143660" maxMicrosecondsPerInvocation="168473" standardDeviationMicrosecondsPerInvocation="24813"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="158" invocations="153" avgMicrosecondsPerInvocation="1038" maxMicrosecondsPerInvocation="44967" standardDeviationMicrosecondsPerInvocation="4186"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1599426047183" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

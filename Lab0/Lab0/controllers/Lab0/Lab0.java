@@ -4,6 +4,4 @@
 public class Lab0 {
   public static void main(String[] args) {
     ca.mcgill.ecse211.project.Main.main(args);
-
-  }
 }
