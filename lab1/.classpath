@@ -8,6 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="controllers/Lab1/lib/simlejos.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="lib" path="/usr/local/webots/lib/controller/java/Controller.jar" sourcepath="/usr/local/webots/resources/languages/java"/>
+	<classpathentry kind="lib" path="/Applications/Webots.app/lib/controller/java/Controller.jar" sourcepath="/usr/local/webots/resources/languages/java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

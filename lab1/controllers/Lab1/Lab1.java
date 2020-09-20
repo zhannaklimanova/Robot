@@ -20,13 +20,13 @@ public class Lab1 {
   //Parameters: adjust these for desired performance. You can also add new ones.
   
   /** Ideal distance between the sensor and the wall (cm). */
-  public static final int WALL_DIST = 20;
+  public static final int WALL_DIST = 40;
   /** Maximum tolerated deviation from the ideal wall distance (deadband), in cm. */
-  public static final int WALL_DIST_ERR_THRESH = 3;
+  public static final int WALL_DIST_ERR_THRESH = 2;
   /** Speed of slower rotating wheel (deg/sec). */
-  public static final int MOTOR_LOW = 25;
+  public static final int MOTOR_LOW = 370;
   /** Speed of the faster rotating wheel (deg/sec). */
-  public static final int MOTOR_HIGH = 200;
+  public static final int MOTOR_HIGH = 600;
   /** The limit of invalid samples that we read from the US sensor before assuming no obstacle. */
   public static final int INVALID_SAMPLE_LIMIT = 20;
   /** The poll sleep time, in milliseconds. */
@@ -55,7 +55,7 @@ public class Lab1 {
   private static int[] motorSpeeds = new int[2];
   
   /** The initial value of the error distance. */
-  // public static int distError = 0;
+  public static int distError = 0;
   
   private static final int LEFT = 0;
   private static final int RIGHT = 1;
@@ -112,10 +112,32 @@ public class Lab1 {
     int leftSpeed = MOTOR_HIGH;
     int rightSpeed = MOTOR_HIGH;
     
-    // TODO Calculate the correct motor speeds and assign them to motorSpeeds like this
-    
-    motorSpeeds[LEFT] = leftSpeed;
-    motorSpeeds[RIGHT] = rightSpeed;
+    // If the wall distance is within the maximum distance of sensor, then compute the error
+    if (distance < MAX_SENSOR_DIST) {
+      distError = WALL_DIST - distance;
+     
+      // If the measured error is within the limits, left and right wheel set to same speed
+      if (Math.abs(distError) <= WALL_DIST_ERR_THRESH) {
+        leftSpeed = MOTOR_HIGH;
+        rightSpeed = MOTOR_HIGH;
+      
+      // If the robot is too close to the wall, speed of the right wheel is decreased
+      } else if (distError > 0) {
+        leftSpeed = MOTOR_HIGH;
+        rightSpeed = MOTOR_HIGH - MOTOR_LOW;
+      
+      // If the robot is too far from the wall, the speed of the right wheel is increased
+      } else if (distError < 0) {
+        leftSpeed = MOTOR_HIGH;
+        rightSpeed = MOTOR_HIGH + MOTOR_LOW;
+
+
+      }
+      // Set the left and right speed to the left and right motor speeds, respectively
+      motorSpeeds[LEFT] = leftSpeed;
+      motorSpeeds[RIGHT] = rightSpeed;
+    }
+   
   }
   
   /** Returns the filtered distance between the US sensor and an obstacle in cm. */

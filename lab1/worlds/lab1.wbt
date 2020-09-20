@@ -15,8 +15,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.24687378137155025 -0.8759304066159862 -0.4144867414488249 4.047266228694305
-  position 2.9727315653717916 3.7333500216630147 -1.017222514910095
+  orientation 0.010066330633266847 0.954708208019672 0.29737334535470483 3.285636209128941
+  position 0.4422673296638453 0.9441897443958035 -0.7368691729945485
 }
 DPM-Floor {
   dimension 4 4
@@ -25,4 +25,67 @@ DPM-Floor {
 TexturedBackground {
 }
 TexturedBackgroundLight {
+}
+DPM-Robot {
+  hidden position_1_0 2.5279374236589875
+  hidden translation_2 5.071302012377642e-07 -0.00014986159846599174 0.0002123031256085734
+  hidden rotation_2 -0.6510181419700556 -0.4261777308218507 -0.6281304964554698 2.967455941811186
+  hidden translation_4 0.00020407099172999044 0.0003018333443329802 -0.00013633696693060582
+  hidden rotation_4 0.9994658328692512 0.006714702300260025 -0.03198377244780737 0.00012004903351559251
+  translation 0.127616 0.0550376 1.03968
+  rotation 0.0016649101802469585 -0.9999251082541639 0.012124601312636882 1.66294
+  children [
+    BallCaster {
+      translation 0 -0.05 0.04
+      rotation -1 0 0 1.5708
+    }
+    NXT-Motor {
+      translation -0.066 0.02 -0.06
+      rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
+      position -0.00012322001897290525
+      children [
+        EV3-Ultrasonic {
+          name "S1"
+          translation -0.04 0.035 0.016
+          rotation -0.6785991692107597 -0.28108307008891553 0.6785981692105104 2.59357
+        }
+        sensor_base-solid {
+          translation -0.02 0.019 0.004
+          rotation -0.023589907637195383 0.9994433235681993 0.023591507637713383 -1.5713553071795863
+        }
+      ]
+    }
+    EV3-LargeMotor {
+      name "A"
+      translation 0.055 -0.026 -0.022
+      rotation -1 0 0 1.5708
+      position 8142.897288427104
+      children [
+        Wheel {
+          translation 0.02 0 0
+          rotation 0 0 1 1.5708
+        }
+      ]
+    }
+    EV3-LargeMotor {
+      name "D"
+      translation -0.055 -0.026 -0.022
+      rotation 1 0 0 -1.5707953071795862
+      position 6621.916211589208
+      children [
+        Wheel {
+          translation -0.02 0 0
+          rotation 0 0 1 -1.5708
+        }
+      ]
+    }
+    robot_base-solid {
+      translation 0 -0.014 -0.008
+      rotation 1 0 0 -1.5708
+    }
+    EV3 {
+      rotation 1 0 0 -1.5708
+    }
+  ]
+  controller "Lab1"
 }

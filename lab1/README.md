@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Robot
+=======
 # Lab 1 - Wall Follower
 
 **Code due: Immediately before your demo(s), Wednesday, September 16 at the latest**
@@ -29,3 +32,4 @@ It is run in a second thread, where an infinite loop continuously does the follo
   
 
 
+>>>>>>> d3d6448... second commit
