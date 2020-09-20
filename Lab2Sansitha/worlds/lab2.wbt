@@ -1,0 +1,113 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  basicTimeStep 16
+  coordinateSystem "NUE"
+  contactProperties [
+    ContactProperties {
+      material1 "DPM-Tile"
+      material2 "Rubber"
+      coulombFriction [
+        1000
+      ]
+      bounce 0.1
+      softCFM 0.0001
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.9411822993604295 -0.321326418892442 0.10452373841560395 0.4966059989823739
+  position 0.13848239145293673 0.2926670853126322 0.6628560317464633
+}
+DPM-Floor {
+  dimension 5 5
+  wallHeight 0.2
+  children [
+    DPM-Marker {
+      translation 0.15 0.15
+      r1 0
+      r2 0.015
+      sections 25
+      ringColor 1 0 0
+      borderColor 1 0 0
+    }
+  ]
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DPM-Robot {
+  hidden linearVelocity_0 4.288811346758856e-06 -1.8112262448804322e-07 1.0761373984515318e-06
+  hidden angularVelocity_0 -3.9191500732421295e-07 4.2148446065525705e-06 3.1018010020050455e-06
+  hidden position_1_0 -6.13343380954625
+  hidden translation_2 -3.0699381375842716e-05 -0.0002829469102219595 0.0012609165770808744
+  hidden rotation_2 0.24717035572413384 0.23549305764003556 -0.9399201216351057 2.2254908707444563
+  hidden linearVelocity_2 1.0044593507935983e-05 1.2236597107014337e-06 2.66189458316849e-06
+  hidden angularVelocity_2 0.0011843581795023205 -3.4949336365849146e-06 -0.004826972007535509
+  hidden translation_4 0.00013081171092089978 -2.4866140049382995e-06 -1.0870758750354032e-07
+  hidden rotation_4 0.9997798142253969 0.004443403464639427 -0.02050802850303656 0.0001189788774810266
+  hidden linearVelocity_4 4.0177973127205145e-06 1.774634908157663e-07 4.3577702229877854e-07
+  hidden angularVelocity_4 -5.180172930242309e-07 1.047013790765895e-05 3.079214015446763e-06
+  hidden rotation_9 1 0 0 0.0007465970032013134
+  hidden linearVelocity_9 4.741495993640539e-06 4.6134494077265273e-10 8.981031910446418e-07
+  hidden angularVelocity_9 -8.399429687227448e-07 4.218890365627904e-06 6.458146092282342e-06
+  hidden rotation_12 -1 0 0 0.0005011033938296735
+  hidden linearVelocity_12 4.152427847482113e-06 2.8020775558405825e-09 8.19510598848186e-07
+  hidden angularVelocity_12 -6.787120462147307e-07 4.216514904868969e-06 5.249523361141363e-06
+  translation 0.1578056989868259 0.06116242339680215 0.1660085907903447
+  rotation -0.008497017147256656 0.9999074459252345 -0.010625454478423797 -1.7035123809494117
+  children [
+    BallCaster {
+      translation 0 -0.05 0.04
+      rotation -1 0 0 1.5708
+    }
+    NXT-Motor {
+      translation -0.066 0.02 -0.06
+      rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
+      position -0.00012012449932640029
+      children [
+        EV3-Ultrasonic {
+          name "S1"
+          translation -0.04 0.035 0.016
+          rotation -0.6785991692107597 -0.28108307008891553 0.6785981692105104 2.59357
+        }
+        sensor_base-solid {
+          translation -0.02 0.019 0.004
+          rotation -0.023589907637195383 0.9994433235681993 0.023591507637713383 -1.5713553071795863
+        }
+      ]
+    }
+    EV3-LargeMotor {
+      name "D"
+      translation 0.055 -0.026 -0.022
+      rotation -1 0 0 1.5708
+      position 8314.368320315043
+      children [
+        Wheel {
+          translation 0.02 0 0
+          rotation 0 0 1 1.5708
+        }
+      ]
+    }
+    EV3-LargeMotor {
+      name "A"
+      translation -0.055 -0.026 -0.022
+      rotation 1 0 0 -1.5707953071795862
+      position 6702.424196272007
+      children [
+        Wheel {
+          translation -0.02 0 0
+          rotation 0 0 1 -1.5708
+        }
+      ]
+    }
+    robot_base-solid {
+      translation 0 -0.014 -0.008
+      rotation 1 0 0 -1.5708
+    }
+    EV3 {
+      rotation 1 0 0 -1.5708
+    }
+  ]
+  controller "Lab2"
+}
