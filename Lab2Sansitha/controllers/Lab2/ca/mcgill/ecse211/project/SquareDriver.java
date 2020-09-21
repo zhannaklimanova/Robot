@@ -46,8 +46,8 @@ public class SquareDriver {
    */
   public static void moveStraightFor(double distance) {
     // TODO
-    leftMotor.rotate(convertDistance(distance * TILE_SIZE) * 360, true);
-    rightMotor.rotate(convertDistance(distance * TILE_SIZE) * 360, false);
+    leftMotor.rotate(convertDistance(distance * TILE_SIZE), true);
+    rightMotor.rotate(convertDistance(distance * TILE_SIZE), false);
     
   }
   
@@ -61,8 +61,8 @@ public class SquareDriver {
    */
   public static void turnBy(double angle) {
     // TODO Hint: similar to moveStraightFor(), but use a minus sign
-    leftMotor.rotate(convertAngle(angle) * 360, true);
-    leftMotor.rotate(-convertAngle(angle) * 360, false);
+    leftMotor.rotate(-convertAngle(angle), true);
+    rightMotor.rotate(-convertAngle(angle), false);
   }
   
   /**
@@ -73,7 +73,7 @@ public class SquareDriver {
    */
   public static int convertDistance(double distance) {
     // TODO Compute and return the correct value
-    return (int) (distance / (2 * Math.PI * WHEEL_RAD));
+    return (int) (180.0 * distance / (Math.PI * WHEEL_RAD));
   }
 
   /**
@@ -85,7 +85,7 @@ public class SquareDriver {
    */
   public static int convertAngle(double angle) {
     // TODO Compute and return the correct value. Hint: you can reuse convertDistance()
-    return (int) (angle / 360.0);
+    return (int) angle;
   }
   
   /**
