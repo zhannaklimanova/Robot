@@ -34,7 +34,7 @@ public class Resources {
   public static final int TIMEOUT_PERIOD = 2000;
   
   /** The tile size in meters. Note that 0.3048 m = 1 ft. */
-  public static final double TILE_SIZE = 0.3048;
+  public static final double TILE_SIZE = 2.80;
   
   /** The odometer. */
   public static Odometer odometer = Odometer.getOdometer();
