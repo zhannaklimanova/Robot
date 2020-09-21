@@ -66,8 +66,7 @@ public class Odometer implements Runnable {
    */
   private Odometer() {
     // TODO Set the robot starting point here  
-    setXyt(10, 10, 10);
-    getXyt();
+    setXyt(x, y, theta);
   }
 
   /**

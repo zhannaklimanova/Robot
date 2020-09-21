@@ -34,7 +34,7 @@ public class Main {
     setNumberOfParties(NUMBER_OF_THREADS);
     
     // TODO Start the odometer thread (1 line)
-    //new Thread(Odometer.getOdometer()).start();
+    new Thread(Odometer.getOdometer()).start();
  
     // Start the square driver, which internally starts a thread
     SquareDriver.drive();
