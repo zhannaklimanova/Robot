@@ -16,7 +16,7 @@ public class Resources {
   // TODO Adjust the following parameters based on your robot
   
   /** The wheel radius in meters. */
-  public static final double WHEEL_RAD = 0.21;
+  public static final double WHEEL_RAD = 0.021;
   
   /** The robot width in meters. */
   public static final double BASE_WIDTH = 0.04;
@@ -25,7 +25,7 @@ public class Resources {
   public static final int FORWARD_SPEED = 250;
   
   /** The speed at which the robot rotates in degrees per second. */
-  public static final int ROTATE_SPEED = 150;
+  public static final int ROTATE_SPEED = 250;
   
   /** The motor acceleration in degrees per second squared. */
   public static final int ACCELERATION = 3000;
@@ -34,7 +34,7 @@ public class Resources {
   public static final int TIMEOUT_PERIOD = 2000;
   
   /** The tile size in meters. Note that 0.3048 m = 1 ft. */
-  public static final double TILE_SIZE = 2.80;
+  public static final double TILE_SIZE = 0.3048;
   
   /** The odometer. */
   public static Odometer odometer = Odometer.getOdometer();

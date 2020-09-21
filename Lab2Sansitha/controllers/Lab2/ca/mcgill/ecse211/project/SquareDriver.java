@@ -9,7 +9,7 @@ import static simlejos.ExecutionController.*;
 public class SquareDriver {
   
   /** The length of the size of the square in tiles. Ranges from 3 to 6 (inclusive). */
-  public static final int SQUARE_LENGTH = 4;
+  public static final int SQUARE_LENGTH = 6;
 
   /**
    * Drives the robot in a square of SQUARE_LENGTH. It is to be run in parallel
@@ -86,7 +86,7 @@ public class SquareDriver {
    */
   public static int convertAngle(double angle) {
     // TODO Compute and return the correct value. Hint: you can reuse convertDistance()
-    return convertDistance(2 * angle * Math.PI * WHEEL_RAD / 360.0);
+    return convertDistance(Math.PI * WHEEL_RAD * angle * BASE_WIDTH / (360.0 * WHEEL_RAD));
   }
   
   /**

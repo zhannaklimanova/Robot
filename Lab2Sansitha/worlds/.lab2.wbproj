@@ -5,5 +5,5 @@ sceneTreePerspectives: 000000ff0000000100000002000000c0000000fc01000000060100000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 0 "controllers/Lab2/Lab2.java" "controllers/Lab2/ca/mcgill/ecse211/project/Odometer.java" "controllers/Lab2/ca/mcgill/ecse211/project/Resources.java" "controllers/Lab2/ca/mcgill/ecse211/project/SquareDriver.java" "controllers/Lab2/ca/mcgill/ecse211/project/Main.java"
+textFiles: 3 "controllers/Lab2/Lab2.java" "controllers/Lab2/ca/mcgill/ecse211/project/Odometer.java" "controllers/Lab2/ca/mcgill/ecse211/project/Resources.java" "controllers/Lab2/ca/mcgill/ecse211/project/SquareDriver.java" "controllers/Lab2/ca/mcgill/ecse211/project/Main.java"
 consoles: Console:All:All
